@@ -5,15 +5,15 @@
   tasks:
   - name: Download our File 
     get_url: url=https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz  dest=/home/nts
-    become: true
+ 
   - name: Extract our file to /home/nts
     unarchive:
       src: /home/nts/dokuwiki-stable.tgz
       dest: /home/nts/dokuwiki
-      become: true
+
   - name: Permissions update
     file: path=/home/nts/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
-    become: true
+
   - name: Do anything
     command: nohup echo Done # Execute command even after you have exited from the shell prompt
-    become: true
+
