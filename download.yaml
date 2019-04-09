@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   vars:
-   download_url: https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz
+   download_url: https://git.kernel.org/torvalds/t/linux-5.1-rc4.tar.gz
   tasks:
   - name: Download Linux Kernel
     command: "wget --no-check-certificate --no-cookies {{download_url}} "
