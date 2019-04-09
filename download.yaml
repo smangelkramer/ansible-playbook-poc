@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  vars:
+   download_url: https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz
+  tasks:
+  - name: Download Linux Kernel
+    command: "wget --no-check-certificate --no-cookies {{download_url}} "
+  - name: Unpack the loved Linux Kernel
+    command: "tar xvzf linux-5.0.7.tar.xz"
