@@ -8,8 +8,8 @@
 
   - name: Extract our file to /usr/src/dokuwiki
     unarchive:
-    src: /usr/src/dokuwiki-stable.tgz
-    dest: /usr/src/dokuwiki
+      src: /usr/src/dokuwiki-stable.tgz
+      dest: /usr/src/dokuwiki
     
   - name: Permissions update
     file: path=/usr/src/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
