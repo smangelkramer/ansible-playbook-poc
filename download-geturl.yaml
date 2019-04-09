@@ -10,7 +10,7 @@
     command: tar xvfz /usr/src/dokuwiki-stable.tgz
  
   - name: Move our directory
-    command: mv /usr/src/dokuwiki-stable /usr/src/dokuwiki
+    command: mv /usr/src/dokuwiki-2018-04-22b usr/src/dokuwiki
   
   - name: Permissions update
     file: path=/usr/src/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
