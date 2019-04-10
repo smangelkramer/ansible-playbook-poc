@@ -9,6 +9,7 @@
   - name: Extract our file to /tmp
     unarchive:
       src: /tmp/dokuwiki-stable.tgz
+      remote_src: yes
       dest: /tmp/
       
   - name: Do anything
