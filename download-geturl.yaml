@@ -4,15 +4,15 @@
   gather_facts: no
   tasks:
   - name: Download our File 
-    get_url: url=https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz  dest=/home/nts
+    get_url: url=https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz  dest=/tmp
  
-  - name: Extract our file to /home/nts
+  - name: Extract our file to /tmp
     unarchive:
-      src: /home/nts/dokuwiki-stable.tgz
-      dest: /home/nts/dokuwiki
+      src: /tmp/dokuwiki-stable.tgz
+      dest: /tmp/dokuwiki
 
   - name: Permissions update
-    file: path=/home/nts/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
+    file: path=/tmp/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
 
   - name: Do anything
     command: nohup echo Done # Execute command even after you have exited from the shell prompt
