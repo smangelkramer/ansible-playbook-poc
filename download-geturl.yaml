@@ -9,11 +9,8 @@
   - name: Extract our file to /tmp
     unarchive:
       src: /tmp/dokuwiki-stable.tgz
-      dest: /tmp/dokuwiki
-
-  - name: Permissions update
-    file: path=/tmp/dokuwiki owner=nts group=nts mode=775 state=directory recurse=yes
-
+      dest: /tmp/
+      
   - name: Do anything
     command: nohup echo Done # Execute command even after you have exited from the shell prompt
 
